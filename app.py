@@ -13,7 +13,7 @@ def hello():
 @app.route("/v1/<filename>")
 def getConfigFile(filename):
 	gitClient = Github();
-	gitRepo = gitClient.get_repo('');
+	gitRepo = gitClient.get_repo(gitRepoURL);
 	file_content = repo.get_file_contents(name);
 	return file_content;
 	
