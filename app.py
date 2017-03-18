@@ -14,7 +14,7 @@ def hello():
 def getConfigFile(filename):
 	gitClient = Github();
 	gitRepo = gitClient.get_repo(gitRepoURL);
-	file_content = gitRepo.get_file_contents(name);
+	file_content = gitRepo.get_file_contents(filename);
 	return file_content;
 	
 
