@@ -16,7 +16,7 @@ def getConfigFile(filename):
 	gitClient = Github();
 	gitRepo = gitClient.get_repo(gitRepoURL);
 	file_content = gitRepo.get_file_contents(filename);
-	return jsonify(file_content);
+	return file_content.decoded_content;
 	
 
 if __name__ == "__main__":
