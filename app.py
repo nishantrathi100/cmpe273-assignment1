@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import jsonify
 from github import Github
 import sys
 
@@ -15,7 +16,7 @@ def getConfigFile(filename):
 	gitClient = Github();
 	gitRepo = gitClient.get_repo(gitRepoURL);
 	file_content = gitRepo.get_file_contents(filename);
-	return file_content;
+	return jsonify(file_content);
 	
 
 if __name__ == "__main__":
